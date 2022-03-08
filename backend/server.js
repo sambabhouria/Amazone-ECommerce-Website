@@ -1,7 +1,10 @@
-const express = require('express')
-const  cors = require('cors')
-const data = require('./data.js'); /* put ./ if not node consider is package module*/
+// const express = require('express') /*  common js way */
+// const  cors = require('cors')
+// const data = require('./data.js'); /* put ./ if not node consider is package module*/
 
+import express from 'express';
+import cors from 'cors';
+import data from './data';
 
 const app = express();
 

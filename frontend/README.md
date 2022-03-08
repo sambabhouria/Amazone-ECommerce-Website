@@ -93,3 +93,46 @@ FULL JAVASCRIPT WEB-SITE
    4. set start: nodemon --watch backend --exec babel-node backend/server.js
    5. convert require to import in server.js
    6. npm start
+
+10. Enabling Code Linting
+   1. npm install -D esling
+   2. install VSCode eslint extension
+   3. create .eslintrc and set module.exports for env to node
+   4. Set VSCode setting for editor.codeActionsOnSave source.fixAll.eslint to true
+   5. check result for linting error
+   6. npm install eslint-config-airbnb-base and eslint-plugin-import
+   7. set extends to airbnb-base
+   8. set parserOptions to ecmaVersion 11 and sourceType to module
+   9. set rules for no-console to 0 to ignore linting error
+
+11. Install VSCode Extension
+   1. JavaScript (ES6) code snippets
+   2. ES7 React/Redux/GraphQL/React-Native snippets
+   3. Prettier - Code formatte
+   4. HTML&LESS grammar injections
+
+12. Create Rating Component
+   1. create components/Rating.js
+   2. link to fontawesome.css in index.html
+   3. create div.rating
+   4. define Rating object with render()
+   5. if !props.value return empty div
+   6. else use fa fa-star, fa-star-half-o and fa-star-o
+   7. last span for props.text || ''
+   9. style div.rating, span and last span
+   10. Edit HomeScreen
+   11. Add div.product-rating and use Rating component
+
+13 Product Screen
+   1. get product id from request
+   2. implement /api/product/:id api
+   3. send Ajax request to product api
+
+14 Product Screen UI
+   1. create back to result link
+   2. create div.details with 3 columns
+   3. column 1 for product image
+   4. column 2 for product information
+   5. column 3 form product action
+   6. style .details and all columns
+   7. create add to cart button with add-button id

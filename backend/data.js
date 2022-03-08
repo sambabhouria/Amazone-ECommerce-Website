@@ -1,4 +1,5 @@
-module.exports =  { /* common epxort js  not es6 epxort*/
+// module.exports =  { /* common epxort js  not es6 epxort*/
+  export default   { /* this is es6 epxort*/
     products: [
       {
         _id: '1',
