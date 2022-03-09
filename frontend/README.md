@@ -136,3 +136,81 @@ FULL JAVASCRIPT WEB-SITE
    5. column 3 form product action
    6. style .details and all columns
    7. create add to cart button with add-button id
+
+15 Product Screen Action
+   1. after_render() to add event to the button
+   2. add event handler for the button
+   3. redirect user to cart/:product_id
+   4.implement after_render in index.js
+
+16 Add To Cart Action
+   1. create CartScreen.js
+   2. parseRequestUrl
+   3. getProduct(request.id)
+   4. addToCart
+   5. getCartItems
+   6. cartItems.find
+   7. if existItem update qty
+   8. else add item
+   10. setCartItems
+
+17 Cart Screen UI
+   1. cartItems = getCartItems()
+   2. create 2 columns for cart items and cart action
+   3. cartItems.length === 0 ? cart is empty
+   4. show item image, name, qty and price
+   5. cart action
+   6. Subtotal
+   7. Proceed to Checkout button
+   8. Add CSS Style
+
+18 Update and Delete Cart Items
+   1. add qty select next to each item
+   2. after_render()
+   3. add change event to qty select
+   4. getCartItems() and pass to addToCart()
+   5. set force to true to addToCart()
+   6. create rerender() as (component, areaName = 'content')
+   7. component.render and component.after_render
+   8. if force is true then rerender()
+   9. add delete button next to each item
+   10. add click event to qty button
+   11. call removeFromCart(deleteButton.id)
+   12. implement removeFromCart(id)
+   13. setCartItems( getCartItems().filter)
+   14. if id === parseRequestUrl().id? redirect to '/cart'
+   15. else rerender(CartScreen);
+
+19 Connect To MongoDB and Create Admin User
+   1. npm install mongoose
+   2. connect to mongodb
+   3. create config.js
+   4. npm install dotenv
+   5. export MONGODB_URL
+   6. create models/userModel.js
+   7. create userSchema and userModel
+   8. create userRoute
+   9. create createadmin route
+
+20 Sign-in Screen UI
+   1. create SigninScreen
+   2. render email and password fields
+   3. style signin form
+
+21 Sign-in Screen Backend
+   1. create signin api in backend
+   2. create route for /api/users/signin
+   3. create check user name and password
+   4. if it is not ok the return 401 error
+   5. install express-async-handler
+   7. wrap it in expressAsyncHandler
+   8. add error middleware in server.js
+   9. install Postman
+   10. send post request
+   11. test with invalid user password
+   12. otherwise generate token
+   13. install jsonwebtoken
+   14. set config.JWT_SECRET to somethingsecret
+   15. add generateToken to utils.js
+   16. return token
+   17. test with correct user and password
