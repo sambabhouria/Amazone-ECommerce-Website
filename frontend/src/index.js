@@ -31,9 +31,10 @@ const routes = {
     console.log('request', request);
     console.log('routes[parseUrl]', routes[parseUrl]);
     const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen;
+
     const main = document.getElementById('main-container');
-    console.log(main)
     main.innerHTML = await screen.render();
+    if (screen.after_render) await screen.after_render();
 };
 
 window.addEventListener('load', router);
