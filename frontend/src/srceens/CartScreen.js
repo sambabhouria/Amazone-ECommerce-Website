@@ -107,9 +107,9 @@ const CartScreen = {
               </div>
             </li>
             `
-                  )
-                  .join('\n')
-          } 
+                )
+                .join('\n')
+          }
         </ul>
       </div>
       <div class="cart-action">

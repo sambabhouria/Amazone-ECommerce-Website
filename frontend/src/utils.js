@@ -1,4 +1,4 @@
-// import { getCartItems } from './localStorage';
+import { getCartItems } from './localStorage';
 
 export const parseRequestUrl = () => {
   const address = document.location.hash.slice(1).split('?')[0];
@@ -48,11 +48,11 @@ export const showMessage = (message, callback) => {
       }
     });
 };
-// export const redirectUser = () => {
-//   console.log(getCartItems().length);
-//   if (getCartItems().length !== 0) {
-//     document.location.hash = '/shipping';
-//   } else {
-//     document.location.hash = '/';
-//   }
-// };
+export const redirectUser = () => {
+  console.log(getCartItems().length);
+  if (getCartItems().length !== 0) {
+    document.location.hash = '/shipping';
+  } else {
+    document.location.hash = '/';
+  }
+};

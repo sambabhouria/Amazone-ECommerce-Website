@@ -1,28 +1,14 @@
 import Rating from '../components/Rating';
-// import { getProducts } from '../api';
-// import { parseRequestUrl } from '../utils';
-
-// import data from '../data.js'
-
-import axios from 'axios';
+import { getProducts } from '../api';
+import { parseRequestUrl } from '../utils';
 
 const HomeScreen = {
   render: async () => {
-    // const { value } = parseRequestUrl();
-     const response = await axios({
-       url:"http://localhost:9000/api/products",
-       headers: {
-         'Content-Type': 'application/json',
-       }
-     });
-    // const {products} = data;
-    if(!response || response.statusText !== 'OK') {
-      return `<div class="error">Error in geting data</div>`;
+    const { value } = parseRequestUrl();
+    const products = await getProducts({ searchKeyword: value });
+    if (products.error) {
+      return `<div class="error">${products.error}</div>`;
     }
-    const products =  response.data;
-    // if (products.error) {
-    //   return `<div class="error">${products.error}</div>`;
-    // }
 
     return `
     <ul class="products">
@@ -59,5 +45,4 @@ const HomeScreen = {
     `;
   },
 };
-
 export default HomeScreen;

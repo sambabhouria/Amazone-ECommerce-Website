@@ -11,7 +11,7 @@ const routes = {
     '/product/:id': ProductScreen,
     // '/order/:id': OrderScreen,
     '/cart/:id': CartScreen,
-    // '/cart': CartScreen,
+    '/cart': CartScreen,
     // '/signin': SigninScreen,
     // '/register': RegisterScreen,
     // '/profile': ProfileScreen,
