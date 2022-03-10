@@ -33,6 +33,7 @@ const CartScreen = {
   after_render: () => {
     const qtySelects = document.getElementsByClassName('qty-select');
     Array.from(qtySelects).forEach((qtySelect) => {
+      // for evry element add event listner
       qtySelect.addEventListener('change', (e) => {
         const item = getCartItems().find((x) => x.product === qtySelect.id);
         addToCart({ ...item, qty: Number(e.target.value) }, true);
