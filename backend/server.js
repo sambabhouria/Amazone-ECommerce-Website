@@ -49,6 +49,17 @@ app.get("/api/products/:id", (req,res) => {
     }
 });
 
+/**
+ * By using this all our error will be catch by this
+ * middleware
+ */
+app.use((err, req, res, next) => {
+  /*
+  * This mean user enter something wrond or server has problem
+  */
+  const status = err.name && err.name === 'ValidationError' ? 400 : 500;
+  res.status(status).send({ message: err.message });
+});
 app.listen(9000, ()=>{
     console.log(`sever is runing at http://loaclhost:9000`)
 })
