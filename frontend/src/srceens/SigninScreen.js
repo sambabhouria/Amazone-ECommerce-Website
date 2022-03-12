@@ -7,6 +7,7 @@ const SigninScreen = {
     document
       .getElementById('signin-form')
       .addEventListener('submit', async (e) => {
+        // using this make page not reload
         e.preventDefault();
         showLoading();
         const data = await signin({

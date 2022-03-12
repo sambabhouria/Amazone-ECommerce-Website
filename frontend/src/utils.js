@@ -51,6 +51,7 @@ export const showMessage = (message, callback) => {
 export const redirectUser = () => {
   console.log(getCartItems().length);
   if (getCartItems().length !== 0) {
+    // document.location.hash = '/';
     document.location.hash = '/shipping';
   } else {
     document.location.hash = '/';
