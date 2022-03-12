@@ -51,6 +51,7 @@
     align-items: center;
     color: #ffffff;
   }
+   /* overlay direct div */
   .overlay > div {
     background-color: #ffffff;
     color: #000000;
@@ -60,6 +61,7 @@
     justify-content: space-around;
     max-width: 40rem;
   }
+  /* overlay direct idv , direct any other item */
   .overlay > div > * {
     margin: 2rem;
   }
