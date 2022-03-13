@@ -5,6 +5,8 @@ import CartScreen from './srceens/CartScreen';
 import SigninScreen from './srceens/SigninScreen';
 import RegisterScreen from './srceens/RegisterScreen';
 import ProfileScreen from './srceens/ProfileScreen';
+import ShippingScreen from './srceens/ShippingScreen';
+import PaymentScreen from './srceens/PaymentScreen';
 
 import Header from "./components/Header";
 
@@ -20,8 +22,8 @@ const routes = {
     '/signin': SigninScreen,
     '/register': RegisterScreen,
     '/profile': ProfileScreen,
-    // '/shipping': ShippingScreen,
-    // '/payment': PaymentScreen,
+    '/shipping': ShippingScreen,
+    '/payment': PaymentScreen,
     // '/placeorder': PlaceOrderScreen,
     // '/dashboard': DashboardScreen,
     // '/productlist': ProductListScreen,

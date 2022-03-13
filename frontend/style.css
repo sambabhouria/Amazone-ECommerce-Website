@@ -238,6 +238,7 @@
     align-items: flex-end;
   }
   .cart-image {
+    /* this mean all element same width: ; */
     flex: 1 1;
   }
   .cart-name {

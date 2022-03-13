@@ -35,7 +35,7 @@ const PaymentScreen = {
               value="Paypal"
               checked />
               <label for="paypal" >PayPal</label>
-             </div> 
+             </div>
           </li>
           <li>
           <div>
@@ -45,7 +45,7 @@ const PaymentScreen = {
             value="Stripe"
              />
             <label for="stripe" >Stripe</label>
-           </div> 
+           </div>
         </li>
           <li>
             <button type="submit" class="primary">Continue</button>
