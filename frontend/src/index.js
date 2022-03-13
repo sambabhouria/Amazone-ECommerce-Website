@@ -1,9 +1,11 @@
-import HomeScreen from "./srceens/HomeScreen.js";
-import ProductScreen from './srceens/ProductScreen.js';
-import Error404Screen from './srceens/Error404Screen.js';
-import CartScreen from './srceens/CartScreen.js';
-import SigninScreen from './srceens/SigninScreen.js';
-import Header from "./components/Header.js";
+import HomeScreen from "./srceens/HomeScreen";
+import ProductScreen from './srceens/ProductScreen';
+import Error404Screen from './srceens/Error404Screen';
+import CartScreen from './srceens/CartScreen';
+import SigninScreen from './srceens/SigninScreen';
+import RegisterScreen from './srceens/RegisterScreen';
+
+import Header from "./components/Header";
 
 import { parseRequestUrl, showLoading, hideLoading } from './utils';
 
@@ -14,8 +16,8 @@ const routes = {
     // '/order/:id': OrderScreen,
     '/cart/:id': CartScreen,
     '/cart': CartScreen,
-     '/signin': SigninScreen,
-    // '/register': RegisterScreen,
+    '/signin': SigninScreen,
+    '/register': RegisterScreen,
     // '/profile': ProfileScreen,
     // '/shipping': ShippingScreen,
     // '/payment': PaymentScreen,
