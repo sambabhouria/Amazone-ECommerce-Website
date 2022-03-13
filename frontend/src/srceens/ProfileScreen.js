@@ -100,7 +100,6 @@ const ProfileScreen = {
         </table>
       </div>
     </div>
-    
     `;
   },
 };

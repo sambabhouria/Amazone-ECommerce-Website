@@ -17,6 +17,7 @@ export const isAuth = (req, res, next) => {
   if (!bearerToken) {
     res.status(401).send({ message: 'Token is not supplied' });
   } else {
+    // get only bearer token remove the space
     const token = bearerToken.slice(7, bearerToken.length);
     jwt.verify(token, config.JWT_SECRET, (err, data) => {
       if (err) {

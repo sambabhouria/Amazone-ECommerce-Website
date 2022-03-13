@@ -4,6 +4,7 @@ import Error404Screen from './srceens/Error404Screen';
 import CartScreen from './srceens/CartScreen';
 import SigninScreen from './srceens/SigninScreen';
 import RegisterScreen from './srceens/RegisterScreen';
+import ProfileScreen from './srceens/ProfileScreen';
 
 import Header from "./components/Header";
 
@@ -18,7 +19,7 @@ const routes = {
     '/cart': CartScreen,
     '/signin': SigninScreen,
     '/register': RegisterScreen,
-    // '/profile': ProfileScreen,
+    '/profile': ProfileScreen,
     // '/shipping': ShippingScreen,
     // '/payment': PaymentScreen,
     // '/placeorder': PlaceOrderScreen,

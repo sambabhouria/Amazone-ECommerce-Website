@@ -12,6 +12,7 @@ import config from './config';
  * Importing Routers
  */
 import userRouter from './routers/userRouter';
+import orderRouter from './routers/orderRouter';
 
 import data from './data';
 
@@ -36,6 +37,7 @@ app.use(bodyParser.json());
  * Routers
  */
 app.use('/api/users', userRouter);
+app.use('/api/orders', orderRouter);
 app.get("/api/products", (req,res) => {
     res.send(data.products);
 });
