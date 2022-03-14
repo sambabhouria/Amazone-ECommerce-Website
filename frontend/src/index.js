@@ -7,6 +7,7 @@ import RegisterScreen from './srceens/RegisterScreen';
 import ProfileScreen from './srceens/ProfileScreen';
 import ShippingScreen from './srceens/ShippingScreen';
 import PaymentScreen from './srceens/PaymentScreen';
+import PlaceOrderScreen from './srceens/PlaceOrderScreen';
 
 import Header from "./components/Header";
 
@@ -24,7 +25,7 @@ const routes = {
     '/profile': ProfileScreen,
     '/shipping': ShippingScreen,
     '/payment': PaymentScreen,
-    // '/placeorder': PlaceOrderScreen,
+    '/placeorder': PlaceOrderScreen,
     // '/dashboard': DashboardScreen,
     // '/productlist': ProductListScreen,
     // '/orderlist': OrderListScreen,
