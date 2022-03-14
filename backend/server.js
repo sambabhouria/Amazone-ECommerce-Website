@@ -6,6 +6,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import path from 'path';
 import config from './config';
 
 /**
@@ -38,16 +39,21 @@ app.use(bodyParser.json());
  * Routers
  */
 app.use('/api/users', userRouter);
+app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
 app.get('/api/paypal/clientId', (req, res) => {
   res.send({ clientId: config.PAYPAL_CLIENT_ID });
 });
 
-// app.use('/api/products', productRouter);
-
-app.get("/api/products", (req,res) => {
-    res.send(data.products);
+app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
+app.use(express.static(path.join(__dirname, '/../frontend')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../frontend/index.html'));
 });
+
+// app.get("/api/products", (req,res) => {
+//     res.send(data.products);
+// });
 
 app.get("/api/products/:id", (req,res) => {
     const product = data.products.find(product => product._id === req.params.id);

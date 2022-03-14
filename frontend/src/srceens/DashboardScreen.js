@@ -38,7 +38,6 @@ const DashboardScreen = {
       ${DashboardMenu.render({ selected: 'dashboard' })}
       <div class="dashboard-content">
         <h1>Dashboard</h1>
-       
         <ul class="summary-items">
           <li>
             <div class="summary-title color1">
@@ -68,7 +67,7 @@ const DashboardScreen = {
             <h2>Categories</h2>
             <div class="ct-perfect-fourth ct-chart-pie"></div>
           </div>
-        </div>          
+        </div>
       </div>
     </div>
     `;
