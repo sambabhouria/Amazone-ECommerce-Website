@@ -119,7 +119,7 @@ import {
                   ? `<div class="success">Delivered at ${deliveredAt}</div>`
                   : `<div class="error">Not Delivered</div>`
               }
-               
+
             </div>
             <div>
               <h2>Payment</h2>
